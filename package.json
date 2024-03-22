@@ -1,0 +1,48 @@
+{
+  "name": "quasilaborum",
+  "version": "1.8.0",
+  "description": "File specific icons from vscode vscode-icons extension",
+  "main": "dist/Index.js",
+  "typings": "dist/Index.d.ts",
+  "scripts": {
+    "test": "ts-node ./node_modules/jasmine/bin/jasmine.js test/**/*.test.ts",
+    "test:scripts": "npm run script:extract-data-from-vsi && npm run script:create-icons-data",
+    "script:extract-data-from-vsi": "ts-node ./scripts/extract-data-from-vsi.script.ts",
+    "script:create-icons-data": "ts-node ./scripts/create-icons-data.script.ts",
+    "generate-data": "npm run script:extract-data-from-vsi && npm run script:create-icons-data",
+    "lint": "npm run lint:src",
+    "lint:src": "prettier --write ./src/**/*.{ts,tsx,d.ts}",
+    "dev": "tsc --watch",
+    "compile": "tsc",
+    "build": "npm test && npm run generate-data && npm run lint && npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JairoCarroll/quasilaborum.git"
+  },
+  "author": "WillardDouglas",
+  "keywords": [
+    "typescript",
+    "vscode-icons",
+    "inventore"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JairoCarroll/quasilaborum.git/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.24",
+    "@types/node-fetch": "^2.1.6",
+    "jasmine": "^3.3.1",
+    "log4js": "^4.0.2",
+    "node-fetch": "^2.3.0",
+    "prettier": "^1.16.4",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "@types/jasmine": "^3.3.8",
+    "occaecatimodi": "^1.0.0",
+    "voluptatibusquasi": "^1.0.0"
+  }
+}
